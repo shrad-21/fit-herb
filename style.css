@@ -8,6 +8,10 @@
   --teal-dark: #2a6558;
   --off-white: #f7f5f0;
   --text-muted: #8a9a95;
+  --forest: #182418;
+  --sage: #5c8c5c;
+  --cream: #faf7f0;
+  --cream2: #f2ebe0;
 }
 
 * {
@@ -530,7 +534,7 @@ nav {
   font-size: clamp(52px, 8vw, 100px);
   line-height: 1;
   font-weight: 900;
-  color: var(--navy);
+  color: var(--forest);
   margin-bottom: 24px;
   opacity: 0;
   animation: fadeUp 0.9s 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
@@ -611,7 +615,7 @@ nav {
 
 /* ---- TAGLINE STRIP ---- */
 .tagline-strip {
-  background: var(--navy);
+  background: var(--forest);
   color: var(--sage-pale);
   padding: 18px 0;
   overflow: hidden;
@@ -654,7 +658,6 @@ nav {
 /* ---- PROBLEM SECTION ---- */
 .problem-section {
   padding: 100px 0;
-  background-color: #f6f6f6;
 }
 #problem {
   /* background: var(--off-white); */
@@ -741,7 +744,7 @@ nav {
 
 /* ---- SOLUTION ---- */
 #solution {
-  background: var(--navy);
+  background: var(--forest);
   text-align: center;
   padding: 120px 60px;
   position: relative;
@@ -1135,9 +1138,334 @@ nav {
   line-height: 1.1;
 }
 
+/* sale===== */
+.flash-section {
+  background: #f0f7f1;
+  padding: 80px 0;
+}
+.flash-promo {
+  background: var(--white);
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  /* display: grid;
+  grid-template-columns: 300px 1fr; */
+  display: flex;
+  flex-direction: column;
+  min-height: 420px;
+}
+@media (min-width: 1024px) {
+  .flash-promo {
+    flex-direction: row;
+  }
+}
+.flash-promo-left {
+  background: linear-gradient(145deg, #e8f0e0, #d4e8c8);
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 32px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+@media (min-width: 1024px) {
+  .flash-promo-left {
+    width: 30%;
+  }
+}
+.flash-promo-left::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at 70% 30%,
+    rgba(78, 124, 78, 0.15) 0%,
+    transparent 60%
+  );
+}
+.flash-percent {
+  /* font-family: "Cormorant Garamond", serif; */
+  font-size: 96px;
+  font-weight: 600;
+  line-height: 1;
+  color: var(--forest);
+  position: relative;
+  z-index: 1;
+}
+.flash-percent span {
+  font-size: 48px;
+  vertical-align: top;
+  margin-top: 16px;
+  display: inline-block;
+}
+.flash-label {
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--sage);
+  font-weight: 500;
+  margin-bottom: 8px;
+  position: relative;
+  z-index: 1;
+}
+.flash-title {
+  /* font-family: "Cormorant Garamond", serif; */
+  font-size: 28px;
+  font-weight: 500;
+  color: var(--forest);
+  position: relative;
+  z-index: 1;
+  margin-bottom: 24px;
+}
+.btn-buy-now {
+  background: var(--forest);
+  color: var(--cream);
+  padding: 13px 32px;
+  border-radius: 100px;
+  border: none;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.4px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s;
+  position: relative;
+  z-index: 1;
+  font-family: "DM Sans", sans-serif;
+}
+.btn-buy-now:hover {
+  background: var(--sage);
+}
+
+.flash-right {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+@media (min-width: 1024px) {
+  .flash-right {
+    width: 70%;
+  }
+}
+.flash-header {
+  background: var(--sage);
+  padding: 18px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 10px;
+}
+@media (min-width: 768px) {
+  .flash-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.flash-header h3 {
+  /* font-family: "Cormorant Garamond", serif; */
+  font-size: 26px;
+  font-weight: 500;
+  color: #fff;
+  margin: 0;
+}
+.countdown {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+.cd-block {
+  text-align: center;
+}
+.cd-num {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  font-size: 24px;
+  font-weight: 600;
+  /* font-family: "Cormorant Garamond", serif; */
+  min-width: 48px;
+  padding: 4px 10px;
+  border-radius: 8px;
+  display: block;
+  line-height: 1.2;
+  text-align: center;
+}
+.cd-label {
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 3px;
+}
+.cd-sep {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 20px;
+  font-weight: 300;
+  margin-bottom: 16px;
+}
+
+.flash-products-scroll {
+  padding: 24px 32px;
+  overflow-x: auto;
+  margin-left: 30px;
+  flex: 1;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  border: 1px solid var(--sage-pale);
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+}
+.flash-products-scroll::-webkit-scrollbar {
+  height: 4px;
+}
+.flash-products-scroll::-webkit-scrollbar-track {
+  background: var(--cream2);
+  border-radius: 2px;
+}
+.flash-products-scroll::-webkit-scrollbar-thumb {
+  background: var(--sage3);
+  border-radius: 2px;
+}
+
+.flash-card {
+  min-width: 200px;
+  scroll-snap-align: start;
+  background: var(--cream);
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  transition: all 0.4s var(--ease);
+  flex-shrink: 0;
+  transition:
+    transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.flash-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 40px rgba(24, 36, 24, 0.1);
+}
+.flash-card-img {
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  transition:
+    transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.flash-card-img.men-bg {
+  background: linear-gradient(145deg, #daecd4, #c8e0c0);
+}
+.flash-card-img.tulsi-bg {
+  background: linear-gradient(145deg, #eee4d4, #e4d5bc);
+}
+.flash-card-img.women-bg {
+  background: linear-gradient(145deg, #e8e0f0, #dad0ea);
+}
+.flash-card-img img {
+  height: 130px;
+  object-fit: contain;
+  transition:
+    transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.flash-card:hover .flash-card-img img {
+  transform: scale(1.08) translateY(-4px);
+}
+.flash-badge-pill {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: var(--sage);
+  color: #fff;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  padding: 4px 10px;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.flash-card-body {
+  padding: 14px 16px 18px;
+  background: rgb(249, 248, 248);
+}
+.flash-card-name {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--forest);
+  margin-bottom: 6px;
+}
+.flash-card-price {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 12px;
+}
+.flash-now {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--forest);
+}
+.flash-was {
+  font-size: 12px;
+  color: #c0b0a0;
+  text-decoration: line-through;
+}
+.flash-save {
+  font-size: 10px;
+  color: var(--sage);
+  font-weight: 600;
+}
+.btn-add-flash {
+  width: 100%;
+  background: transparent;
+  border: 1px solid var(--forest);
+  color: var(--forest);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  padding: 9px;
+  border-radius: 100px;
+  transition: all 0.3s;
+  font-family: "DM Sans", sans-serif;
+}
+.btn-add-flash:hover {
+  background: var(--forest);
+  color: var(--cream);
+}
+@media (min-width: 768px) {
+  .flash-card {
+    min-width: 180px;
+  }
+
+  .flash-percent {
+    font-size: 70px;
+  }
+}
+@media (min-width: 768px) {
+  .flash-card {
+    min-width: 180px;
+  }
+
+  .flash-percent {
+    font-size: 70px;
+  }
+}
 /* ---- WHY FIT.HERB ---- */
 #why {
-  background: #e8eee9;
+  background: #f0f7f1;
   text-align: center;
   padding: 120px 60px;
 }
@@ -1333,7 +1661,7 @@ nav {
 }
 
 #cta h2 em {
-  color: var(--teal);
+  color: var(--sage);
   font-style: italic;
 }
 
@@ -1357,7 +1685,7 @@ nav {
 
 /* ---- FOOTER ---- */
 footer {
-  background: var(--navy);
+  background: var(--forest);
   color: var(--sage-pale);
   padding: 60px;
   display: flex;
@@ -1472,7 +1800,7 @@ footer p {
 /* ===== SUBSCRIBE STRIP ===== */
 .footer-subscribe-strip {
   width: 100%;
-  background: #1e2d3a;
+  background: var(--forest);
   padding: 80px 20px 60px;
 }
 
@@ -1488,7 +1816,7 @@ footer p {
 .footer-subscribe-box h2 {
   font-family: "Playfair Display", serif;
   font-size: 42px;
-  color: #7aaa97;
+  color: var(--sage);
   margin-bottom: 30px;
 }
 
@@ -1525,13 +1853,13 @@ footer p {
 }
 
 .footer-subscribe-form button:hover {
-  background: #1e2d3a;
+  background: var(--forest);
   border: 1px solid #7aaa97;
 }
 
 /* ===== MAIN FOOTER ===== */
 .main-footer {
-  background: #1e2d3a;
+  background: var(--forest);
   padding: 70px 40px 20px;
   color: #cbd5d1;
   position: relative; /* 🔥 important */
