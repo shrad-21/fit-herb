@@ -70,6 +70,12 @@ body::before {
   background-color: rgba(61, 139, 122, 0.1);
   border-color: var(--teal);
 }
+@media (max-width: 768px) {
+  .cursor-dot,
+  .cursor-outline {
+    display: none !important;
+  }
+}
 /* NAV ACTIONS */
 .nav-actions {
   display: flex;
