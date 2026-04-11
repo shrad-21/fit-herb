@@ -1312,8 +1312,7 @@ nav {
 
 .flash-products-scroll {
   padding: 24px 32px;
-  overflow-x: auto;
-  margin-left: 30px;
+  /* overflow-x: auto; */
   flex: 1;
   display: flex;
   gap: 20px;
