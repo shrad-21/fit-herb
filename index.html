@@ -15,6 +15,8 @@
 </head>
 
 <body>
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
     <div class="progress-bar" id="progressBar"></div>
 
     <!-- NAV -->
@@ -61,6 +63,24 @@
 
         </div>
     </nav>
+    <!-- SIDE NAVBAR -->
+    <div class="side-nav" id="sideNav">
+        <div class="side-nav-header">
+            <h3>Menu</h3>
+            <span class="close-btn" id="closeNav">&times;</span>
+        </div>
+
+        <ul class="side-nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#why">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- OVERLAY -->
+    <div class="overlay" id="overlay"></div>
+
 
     <!-- HERO -->
     <div class="fitherb-banner-section">
@@ -121,6 +141,84 @@
             <span>SIMPLE. AESTHETIC. EFFECTIVE.</span>
         </div>
     </div>
+
+    <!-- PRODUCTS -->
+    <section style="padding:100px 0 0 0 ;">
+        <div class="container">
+            <div id="products">
+                <div class="products-header fade-up">
+                    <div>
+                        <div class="section-label">What We Offer</div>
+                        <h2 class="products-title">Products built<br>for your <em
+                                style="color:var(--teal);font-style:italic;">ritual.</em></h2>
+                    </div>
+                    <p style="color:var(--text-muted);font-size:16px;line-height:1.7;font-weight:300;">
+                        Each formula crafted with single-intent — to solve one thing, and solve it well.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="products-row">
+
+            <!-- Product 1: Men -->
+            <div class="product-card-hover">
+                <button class="wishlist-btn" title="Add to Wishlist">
+                    <i class="fa-regular fa-heart"></i>
+                </button>
+                <div class="bg-shape men    "></div>
+                <div class="img-wrapper">
+                    <img src="men.png" alt="Men's Vitality Fizz">
+                </div>
+                <div class="product-info">
+                    <h3>Men's Vitality Fizz</h3>
+                    <div class="price-box">
+                        <span class="old-price">₹799</span>
+                        <span class="new-price">₹599</span>
+                    </div>
+                    <a href="#" class="add-to-cart-btn">Add to Cart</a>
+                </div>
+            </div>
+
+            <!-- Product 2: Tulsi -->
+            <div class="product-card-hover">
+                <button class="wishlist-btn" title="Add to Wishlist">
+                    <i class="fa-regular fa-heart"></i>
+                </button>
+                <div class="bg-shape"></div>
+                <div class="img-wrapper">
+                    <img src="tulsi-drop.png" alt="Immuno Tulsi Drop">
+                </div>
+                <div class="product-info">
+                    <h3>Immuno Tulsi Drop</h3>
+                    <div class="price-box">
+                        <span class="old-price">₹299</span>
+                        <span class="new-price">₹199</span>
+                    </div>
+                    <a href="#" class="add-to-cart-btn">Add to Cart</a>
+                </div>
+            </div>
+
+            <!-- Product 3: Women -->
+            <div class="product-card-hover">
+                <button class="wishlist-btn" title="Add to Wishlist">
+                    <i class="fa-regular fa-heart"></i>
+                </button>
+                <div class="bg-shape women"></div>
+                <div class="img-wrapper">
+                    <img src="women.png" alt="Women's Glow-Up Fizz">
+                </div>
+                <div class="product-info">
+                    <h3>Women's Glow-Up Fizz</h3>
+                    <div class="price-box">
+                        <span class="old-price">₹799</span>
+                        <span class="new-price">₹599</span>
+                    </div>
+                    <a href="#" class="add-to-cart-btn">Add to Cart</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
 
     <!-- PROBLEM -->
     <section class="problem-section">
@@ -192,44 +290,7 @@
         </div>
     </section>
 
-    <!-- PRODUCTS -->
-    <section style="padding:100px 0 0 0 ;">
-        <div class="container">
-            <div id="products">
-                <div class="products-header fade-up">
-                    <div>
-                        <div class="section-label">What We Offer</div>
-                        <h2 class="products-title">Products built<br>for your <em
-                                style="color:var(--teal);font-style:italic;">ritual.</em></h2>
-                    </div>
-                    <p style="color:var(--text-muted);font-size:16px;line-height:1.7;font-weight:300;">
-                        Each formula crafted with single-intent — to solve one thing, and solve it well.</p>
-                </div>
-            </div>
-        </div>
 
-        <div class="products-new">
-            <div class="product-card-hover">
-                <div class="bg-shape"></div>
-                <img src="men.png" alt="product">
-                <h3>Men's Vitality Fizz</h3>
-                <p>₹599</p>
-            </div>
-
-            <div class="product-card-hover">
-                <div class="bg-shape"></div>
-                <img src="tulsi-drop.png" alt="product">
-                <h3>Immuno Tulsi Drop </h3>
-                <p>₹199</p>
-            </div>
-            <div class="product-card-hover">
-                <div class="bg-shape women"></div>
-                <img src="women.png" alt="product">
-                <h3>Women's Glow-Up Fizz</h3>
-                <p>₹599</p>
-            </div>
-        </div>
-    </section>
 
     <section class="combo-section">
         <div class="container">

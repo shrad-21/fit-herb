@@ -64,3 +64,54 @@ const searchWrapper = document.querySelector(".search-wrapper");
 searchBtn.addEventListener("click", () => {
   searchWrapper.classList.toggle("active");
 });
+const cursorDot = document.querySelector(".cursor-dot");
+const cursorOutline = document.querySelector(".cursor-outline");
+
+window.addEventListener("mousemove", (e) => {
+  const posX = e.clientX;
+  const posY = e.clientY;
+
+  cursorDot.style.left = `${posX}px`;
+  cursorDot.style.top = `${posY}px`;
+
+  cursorOutline.style.left = `${posX}px`;
+  cursorOutline.style.top = `${posY}px`;
+});
+
+const links = document.querySelectorAll(
+  "a, button, .product-card-hover, .wishlist-btn",
+);
+
+links.forEach((link) => {
+  link.addEventListener("mouseenter", () => {
+    cursorOutline.classList.add("cursor-active");
+    cursorDot.style.transform = "translate(-50%, -50%) scale(0)";
+  });
+
+  link.addEventListener("mouseleave", () => {
+    cursorOutline.classList.remove("cursor-active");
+    cursorDot.style.transform = "translate(-50%, -50%) scale(1)";
+  });
+});
+const hamburger = document.querySelector(".hamburger");
+const sideNav = document.getElementById("sideNav");
+const closeNav = document.getElementById("closeNav");
+const overlay = document.getElementById("overlay");
+
+// OPEN
+hamburger.addEventListener("click", () => {
+  sideNav.classList.add("active");
+  overlay.classList.add("active");
+});
+
+// CLOSE BUTTON
+closeNav.addEventListener("click", () => {
+  sideNav.classList.remove("active");
+  overlay.classList.remove("active");
+});
+
+// CLICK OUTSIDE
+overlay.addEventListener("click", () => {
+  sideNav.classList.remove("active");
+  overlay.classList.remove("active");
+});
