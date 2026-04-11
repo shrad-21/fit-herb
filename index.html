@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fit.Herb — Keep Calm, Go Herbal</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&family=Bebas+Neue&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="progress-bar" id="progressBar"></div>
+
+    <!-- NAV -->
+    <nav>
+        <div class="nav-logo">
+            <picture>
+                <source src="fit-herb-mobile.png" media="(max-width: 768px)">
+                <img src="fit-herb-desktop1.png" alt="Fit Herb Logo">
+            </picture>
+        </div>
+
+        <div class="nav-actions">
+
+            <!-- Search -->
+            <div class="search-wrapper">
+                <a href="javascript:void(0)" class="nav-icon search-btn">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </a>
+                <input type="text" class="search-box" placeholder="Search...">
+            </div>
+
+            <!-- Profile -->
+            <a href="#" class="nav-icon">
+                <i class="fa-solid fa-user"></i>
+            </a>
+
+            <!-- Wishlist -->
+            <a href="#" class="nav-icon">
+                <i class="fa-regular fa-heart"></i>
+            </a>
+
+            <!-- Cart -->
+            <a href="#" class="nav-icon cart-icon">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span class="cart-count">2</span>
+            </a>
+
+            <!-- Hamburger -->
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <div class="fitherb-banner-section">
+        <section id="hero">
+            <!-- Decorative leaves -->
+            <svg class="floating-leaf" style="top:10%;left:5%;width:200px;animation-duration:8s;" viewBox="0 0 100 100">
+                <path d="M50 10 Q80 30 70 70 Q50 90 30 70 Q20 30 50 10Z" fill="#7aaa97" />
+            </svg>
+            <svg class="floating-leaf"
+                style="bottom:15%;right:8%;width:150px;animation-duration:11s;animation-delay:-3s;"
+                viewBox="0 0 100 100">
+                <path d="M20 80 Q10 40 50 20 Q90 40 80 80 Q60 100 20 80Z" fill="#7aaa97" />
+            </svg>
+            <svg class="floating-leaf" style="top:20%;right:15%;width:120px;animation-duration:9s;animation-delay:-5s;"
+                viewBox="0 0 100 100">
+                <ellipse cx="50" cy="50" rx="20" ry="45" fill="#3d8b7a" transform="rotate(30,50,50)" />
+            </svg>
+
+            <div class="hero-bg-text">FITHERB</div>
+
+            <div class="hero-content">
+                <div class="hero-badge">🌿 Ayurvedic · Natural · Effective</div>
+                <h1 class="hero-title">
+                    Keep Calm.<br>
+                    <em>Go Herbal.</em>
+                </h1>
+                <p class="hero-sub">
+                    In India, wellness was never complicated. Fit.Herb brings ancient Ayurvedic wisdom into your daily
+                    routine — simple, aesthetic, and powerfully effective.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#products" class="btn-primary">Explore Products →</a>
+                    <a href="#why" class="btn-secondary">Our Story</a>
+                </div>
+            </div>
+            <div class="hero-divider"></div>
+            <div class="fitherb-ban-leaf">
+                <img src="ban-leafleft.png" alt="leaf-image">
+                <img src="ban-leafright.png" alt="leaf-image">
+            </div>
+        </section>
+    </div>
+
+    <!-- TAGLINE STRIP -->
+    <div class="tagline-strip">
+        <div class="tagline-scroll">
+            <span>AYURVEDIC ROOTS</span>
+            <span>NATURAL & SAFE</span>
+            <span>DAILY RITUAL</span>
+            <span>EASY TO USE</span>
+            <span>KEEP CALM GO HERBAL</span>
+            <span>SIMPLE. AESTHETIC. EFFECTIVE.</span>
+            <span>AYURVEDIC ROOTS</span>
+            <span>NATURAL & SAFE</span>
+            <span>DAILY RITUAL</span>
+            <span>EASY TO USE</span>
+            <span>KEEP CALM GO HERBAL</span>
+            <span>SIMPLE. AESTHETIC. EFFECTIVE.</span>
+        </div>
+    </div>
+
+    <!-- PROBLEM -->
+    <section class="problem-section">
+        <div class="container">
+            <div id="problem">
+                <div class="problem-left fade-up">
+                    <div class="section-label">The Problem</div>
+                    <h2>Life got faster.<br>Wellness got <em style="color:var(--teal);font-style:italic;">confused.</em>
+                    </h2>
+                    <p style="margin-top:20px;">People want something that actually works — without complicated
+                        routines,
+                        artificial fillers, or brands they can't trust. The wellness gap is real.</p>
+                </div>
+                <div class="problem-cards">
+                    <div class="problem-card" style="transition-delay:0.1s">
+                        <div class="problem-icon">
+                            <i class="fa-solid fa-bolt"></i>
+                        </div>
+                        <div>
+                            <h3>Life is Faster</h3>
+                            <p>No time for complex wellness rituals and lengthy supplement stacks.</p>
+                        </div>
+                    </div>
+                    <div class="problem-card" style="transition-delay:0.2s">
+                        <div class="problem-icon"><i class="fa-solid fa-brain"></i></div>
+                        <div>
+                            <h3>Stress is Higher</h3>
+                            <p>Urban lifestyles drain energy, immunity, and mental balance daily.</p>
+                        </div>
+                    </div>
+                    <div class="problem-card" style="transition-delay:0.3s">
+                        <div class="problem-icon"><i class="fa-solid fa-circle-question"></i></div>
+                        <div>
+                            <h3>Wellness is Confusing</h3>
+                            <p>Artificial ingredients, no transparency, complicated supplements — no trust.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOLUTION -->
+    <section id="solution">
+        <div class="container">
+            <div>
+                <div class="section-label" style="justify-content:center;">Our Answer</div>
+                <h2 class="solution-title fade-up">The <em>Fit.Herb</em><br>Way.</h2>
+                <p class="solution-sub fade-up">Rooted in Ayurveda. Designed for modern India. One simple ritual, every
+                    day.
+                </p>
+                <div class="philosophy-pills fade-up">
+                    <div class="pill">Simple</div>
+                    <div class="pill">Aesthetic</div>
+                    <div class="pill">Effective</div>
+                    <div class="pill">Ayurvedic</div>
+                    <div class="pill">Natural & Safe</div>
+                    <div class="pill">Daily Ritual</div>
+                </div>
+            </div>
+
+            <!-- decorative circles -->
+            <div
+                style="position:absolute;width:400px;height:400px;border-radius:50%;border:1px solid rgba(122,170,151,0.15);top:-100px;right:-100px;pointer-events:none;">
+            </div>
+            <div
+                style="position:absolute;width:600px;height:600px;border-radius:50%;border:1px solid rgba(122,170,151,0.08);bottom:-200px;left:-200px;pointer-events:none;">
+            </div>
+        </div>
+    </section>
+
+    <!-- PRODUCTS -->
+    <section style="padding:100px 0 0 0 ;">
+        <div class="container">
+            <div id="products">
+                <div class="products-header fade-up">
+                    <div>
+                        <div class="section-label">What We Offer</div>
+                        <h2 class="products-title">Products built<br>for your <em
+                                style="color:var(--teal);font-style:italic;">ritual.</em></h2>
+                    </div>
+                    <p style="color:var(--text-muted);font-size:16px;line-height:1.7;font-weight:300;">
+                        Each formula crafted with single-intent — to solve one thing, and solve it well.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="products-new">
+            <div class="product-card-hover">
+                <div class="bg-shape"></div>
+                <img src="men.png" alt="product">
+                <h3>Men's Vitality Fizz</h3>
+                <p>₹599</p>
+            </div>
+
+            <div class="product-card-hover">
+                <div class="bg-shape"></div>
+                <img src="tulsi-drop.png" alt="product">
+                <h3>Immuno Tulsi Drop </h3>
+                <p>₹199</p>
+            </div>
+            <div class="product-card-hover">
+                <div class="bg-shape women"></div>
+                <img src="women.png" alt="product">
+                <h3>Women's Glow-Up Fizz</h3>
+                <p>₹599</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="combo-section">
+        <div class="container">
+
+            <div class="section-header">
+                <h2>Combo Packs for Better Results</h2>
+                <p>Powerful combinations crafted for complete wellness.</p>
+            </div>
+
+            <div class="combo-grid">
+
+                <!-- Combo 1 -->
+                <div class="combo-card">
+                    <img src="combo-tulsi-men.png" alt="Tulsi + Men Combo">
+
+                    <div class="combo-content">
+                        <h3>Tulsi + Men's Fitness</h3>
+                        <p>Boost immunity + daily strength for active lifestyle.</p>
+                        <button>Shop Combo</button>
+                    </div>
+                </div>
+
+                <!-- Combo 2 -->
+                <div class="combo-card">
+                    <img src="combo-men-women.png" alt="Men + Women Combo">
+
+                    <div class="combo-content">
+                        <h3>Men + Women Care</h3>
+                        <p>Complete wellness for both — strength, balance & vitality.</p>
+                        <button>Shop Combo</button>
+                    </div>
+                </div>
+
+                <!-- Combo 3 -->
+                <div class="combo-card">
+                    <img src="combo-women-tulsi.png" alt="Women + Tulsi Combo">
+
+                    <div class="combo-content">
+                        <h3>Women's Care + Tulsi</h3>
+                        <p>Glow, balance & immunity in one simple ritual.</p>
+                        <button>Shop Combo</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY FITHERB -->
+    <section id="why">
+        <div class="section-label" style="justify-content:center;">Why Fit.Herb</div>
+        <h2 class="fade-up">Four reasons to <em style="color:var(--teal);font-style:italic;">trust us.</em></h2>
+        <p class="sub fade-up">No shortcuts. No artificial anything. Just ancient wisdom, modernised.</p>
+        <div class="why-grid">
+            <div class="why-card" style="transition-delay:0.1s">
+                <span class="why-icon">
+                    <i class="fa-solid fa-leaf"></i>
+                </span>
+                <h3>Ayurvedic Roots</h3>
+                <p>Every formula draws from centuries-old Ayurvedic traditions that have stood the test of time.</p>
+            </div>
+            <div class="why-card" style="transition-delay:0.2s">
+                <span class="why-icon">
+                    <i class="fa-solid fa-shield-heart"></i>
+                </span>
+                <h3>Natural & Safe</h3>
+                <p>Zero artificial ingredients. Clean labels. Exactly what you see is exactly what you get.</p>
+            </div>
+            <div class="why-card" style="transition-delay:0.3s">
+                <span class="why-icon">
+                    <i class="fa-solid fa-arrows-rotate"></i>
+                </span>
+                <h3>Easy to Use</h3>
+                <p>No complicated protocols. Just drop it in, take it daily, and feel the difference over time.</p>
+            </div>
+            <div class="why-card" style="transition-delay:0.4s">
+                <span class="why-icon">
+                    <i class="fa-solid fa-sun"></i>
+                </span>
+                <h3>Daily Ritual</h3>
+                <p>Built to become part of your everyday routine — as natural as your morning chai.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section id="cta">
+        <h2 class="fade-up">Ready to start your<br><em>herbal ritual?</em></h2>
+        <p class="fade-up">Simple. Aesthetic. Effective. The Fit.Herb way.</p>
+        <div class="cta-buttons fade-up">
+            <a href="#products" class="btn-primary">Shop Now →</a>
+            <a href="#why" class="btn-secondary">Learn More</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <!-- SUBSCRIBE STRIP -->
+    <section class="footer-subscribe-strip">
+        <div class="footer-subscribe-box">
+            <h2>Begin Your Herbal Wellness Journey</h2>
+
+            <form class="footer-subscribe-form">
+                <input type="email" placeholder="email" required>
+                <button type="submit">SUBSCRIBE</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- MAIN FOOTER -->
+    <footer class="main-footer">
+        <div class="footer-container">
+
+            <!-- BRAND -->
+            <div class="footer-col brand">
+                <img src="white-logo.png" alt="Fit Herb Logo" class="footer-logo">
+
+                <p>
+                    Meticulously crafted Ayurvedic solutions for a balanced life.
+                    Sourced ethically, bottled spiritually.
+                </p>
+            </div>
+
+            <!-- LINKS 1 -->
+            <div class="footer-col">
+                <h4>Useful Links</h4>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- LINKS 2 -->
+            <div class="footer-col">
+                <h4>Useful Links</h4>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Service</a></li>
+                    <li><a href="#">Return Policy</a></li>
+                </ul>
+            </div>
+
+            <!-- CONTACT -->
+            <div class="footer-col">
+                <h4>Contact Us</h4>
+                <p>Phone: 022 41002121</p>
+                <p>Email: store@fitherb.com</p>
+
+                <div class="social-icons">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-linkedin-in"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- BOTTOM -->
+        <div class="footer-bottom">
+            <p>© 2026 Fit.Herb. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
