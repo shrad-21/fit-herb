@@ -1312,25 +1312,31 @@ nav {
 
 .flash-products-scroll {
   padding: 24px 32px;
-  /* overflow-x: auto; */
-  flex: 1;
   display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
   gap: 20px;
   align-items: flex-start;
   border: 1px solid var(--sage-pale);
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scroll-padding-left: 32px;
+  scroll-padding-right: 32px;
 }
 .flash-products-scroll::-webkit-scrollbar {
-  height: 4px;
+  /* height: 4px; */
+  display: none;
 }
 .flash-products-scroll::-webkit-scrollbar-track {
-  background: var(--cream2);
-  border-radius: 2px;
+  /* background: var(--cream2);
+  border-radius: 2px; */
+  display: none;
 }
 .flash-products-scroll::-webkit-scrollbar-thumb {
-  background: var(--sage3);
-  border-radius: 2px;
+  /* background: var(--sage3);
+  border-radius: 2px; */
+  display: none;
 }
 
 .flash-card {
@@ -1351,8 +1357,9 @@ nav {
   box-shadow: 0 16px 40px rgba(24, 36, 24, 0.1);
 }
 .flash-card-img {
-  height: 160px;
+  height: 250px;
   display: flex;
+  z-index: 1;
   align-items: center;
   justify-content: center;
   position: relative;
@@ -1371,8 +1378,9 @@ nav {
   background: linear-gradient(145deg, #e8e0f0, #dad0ea);
 }
 .flash-card-img img {
-  height: 130px;
-  object-fit: contain;
+  height: 220px;
+  width: 100%;
+  object-fit: cover;
   transition:
     transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
     box-shadow 0.4s cubic-bezier(0.22, 1, 0.36, 1);
@@ -1382,6 +1390,7 @@ nav {
 }
 .flash-badge-pill {
   position: absolute;
+  z-index: 10;
   top: 10px;
   left: 10px;
   background: var(--sage);
@@ -1396,8 +1405,14 @@ nav {
   gap: 4px;
 }
 .flash-card-body {
+  position: relative;
+  z-index: 5;
   padding: 14px 16px 18px;
   background: rgb(249, 248, 248);
+}
+.hcard-tags {
+  font-size: 18px;
+  font-weight: 600;
 }
 .flash-card-name {
   font-family: "Cormorant Garamond", serif;
@@ -1446,22 +1461,14 @@ nav {
 }
 @media (min-width: 768px) {
   .flash-card {
-    min-width: 180px;
+    min-width: 250px;
   }
 
   .flash-percent {
     font-size: 70px;
   }
 }
-@media (min-width: 768px) {
-  .flash-card {
-    min-width: 180px;
-  }
 
-  .flash-percent {
-    font-size: 70px;
-  }
-}
 /* ---- WHY FIT.HERB ---- */
 #why {
   background: #f0f7f1;
