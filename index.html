@@ -15,116 +15,250 @@
 </head>
 
 <body>
-    <div class="cursor-dot"></div>
-    <div class="cursor-outline"></div>
-    <div class="progress-bar" id="progressBar"></div>
-
-    <!-- NAV -->
-    <nav>
-        <div class="nav-logo">
-            <picture>
-                <source src="fit-herb-mobile.png" media="(max-width: 768px)">
-                <img src="fit-herb-desktop1.png" alt="Fit Herb Logo">
-            </picture>
-        </div>
-
-        <div class="nav-actions">
-
-            <!-- Search -->
-            <div class="search-wrapper">
-                <a href="javascript:void(0)" class="nav-icon search-btn">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </a>
-                <input type="text" class="search-box" placeholder="Search...">
-            </div>
-
-            <!-- Profile -->
-            <a href="#" class="nav-icon">
-                <i class="fa-solid fa-user"></i>
-            </a>
-
-            <!-- Wishlist -->
-            <a href="#" class="nav-icon">
-                <i class="fa-regular fa-heart"></i>
-            </a>
-
-            <!-- Cart -->
-            <a href="#" class="nav-icon cart-icon">
-                <i class="fa-solid fa-cart-shopping"></i>
-                <span class="cart-count">2</span>
-            </a>
-
-            <!-- Hamburger -->
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-
-        </div>
-    </nav>
-    <!-- SIDE NAVBAR -->
-    <div class="side-nav" id="sideNav">
-        <div class="side-nav-header">
-            <h3>Menu</h3>
-            <span class="close-btn" id="closeNav">&times;</span>
-        </div>
-
-        <ul class="side-nav-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#products">Products</a></li>
-            <li><a href="#why">About</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
+    <!-- ====== ANNOUNCEMENT BAR ====== -->
+    <div class="ann-bar">
+        ✦ Free shipping above ₹599 &nbsp;|&nbsp; <strong>HERBAL20</strong> — 20% off first order &nbsp;|&nbsp; ✦ Made in
+        India with 100% Natural Ingredients ✦
     </div>
 
-    <!-- OVERLAY -->
-    <div class="overlay" id="overlay"></div>
-
-
-    <!-- HERO -->
-    <div class="fitherb-banner-section">
-        <section id="hero">
-            <!-- Decorative leaves -->
-            <svg class="floating-leaf" style="top:10%;left:5%;width:200px;animation-duration:8s;" viewBox="0 0 100 100">
-                <path d="M50 10 Q80 30 70 70 Q50 90 30 70 Q20 30 50 10Z" fill="#7aaa97" />
-            </svg>
-            <svg class="floating-leaf"
-                style="bottom:15%;right:8%;width:150px;animation-duration:11s;animation-delay:-3s;"
-                viewBox="0 0 100 100">
-                <path d="M20 80 Q10 40 50 20 Q90 40 80 80 Q60 100 20 80Z" fill="#7aaa97" />
-            </svg>
-            <svg class="floating-leaf" style="top:20%;right:15%;width:120px;animation-duration:9s;animation-delay:-5s;"
-                viewBox="0 0 100 100">
-                <ellipse cx="50" cy="50" rx="20" ry="45" fill="#3d8b7a" transform="rotate(30,50,50)" />
-            </svg>
-
-            <div class="hero-bg-text">FITHERB</div>
-
-            <div class="hero-content">
-                <div class="hero-badge">🌿 Ayurvedic · Natural · Effective</div>
-                <h1 class="hero-title">
-                    Keep Calm.<br>
-                    <em>Go Herbal.</em>
-                </h1>
-                <p class="hero-sub">
-                    In India, wellness was never complicated. Fit.Herb brings ancient Ayurvedic wisdom into your daily
-                    routine — simple, aesthetic, and powerfully effective.
-                </p>
-                <div class="hero-buttons">
-                    <a href="#products" class="btn-primary">Explore Products →</a>
-                    <a href="#why" class="btn-secondary">Our Story</a>
+    <!-- ====== HEADER ====== -->
+    <header class="site-header" id="siteHeader">
+        <div class="header-inner">
+            <!-- Left: Search -->
+            <div class="h-search-wrap">
+                <div class="h-search">
+                    <svg viewBox="0 0 24 24">
+                        <circle cx="11" cy="11" r="8" />
+                        <path d="m21 21-4.35-4.35" />
+                    </svg>
+                    <input type="text" placeholder="Search products, ingredients…">
                 </div>
             </div>
-            <div class="hero-divider"></div>
-            <div class="fitherb-ban-leaf">
-                <img src="ban-leafleft.png" alt="leaf-image">
-                <img src="ban-leafright.png" alt="leaf-image">
+            <!-- Centre: Logo -->
+            <div class="h-logo">
+                <a href="#"><img src="https://fit-herb.vercel.app/fit-herb-desktop1.png" alt="Fit.Herb"></a>
             </div>
-        </section>
+            <!-- Right: Actions -->
+            <div class="h-actions">
+                <button class="h-icon" aria-label="Wishlist"><svg viewBox="0 0 24 24">
+                        <path
+                            d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+                    </svg></button>
+                <button class="h-icon" aria-label="Cart" style="position:relative;"><svg viewBox="0 0 24 24">
+                        <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
+                        <line x1="3" y1="6" x2="21" y2="6" />
+                        <path d="M16 10a4 4 0 0 1-8 0" />
+                    </svg><span class="badge">3</span></button>
+                <!-- <button class="h-login">Log In</button> -->
+                <button class="h-shop-btn">Shop Now</button>
+                <button class="h-burger" id="burgerBtn" aria-label="Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ====== MOBILE NAV ====== -->
+    <div class="mobile-nav" id="mobileNav">
+        <div class="mn-backdrop" id="mnBackdrop"></div>
+        <div class="mn-drawer">
+            <button class="mn-close" id="mnClose">×</button>
+            <div class="mn-logo"><img src="https://fit-herb.vercel.app/fit-herb-desktop1.png" alt="Fit.Herb"></div>
+            <ul class="mn-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#sale">Flash Sale</a></li>
+                <li><a href="#hamper">Gift Hamper</a></li>
+                <li><a href="#testi">Reviews</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#join">About</a></li>
+                <li><a href="#footer">Contact</a></li>
+            </ul>
+            <div class="mn-divider"></div>
+            <button class="mn-cta">Shop All Products →</button>
+        </div>
     </div>
 
-    <!-- TAGLINE STRIP -->
+
+    <!-- ====== Hero section ===== -->
+    <section class="hero-section" id="hero">
+        <!-- Ingredient floating tags -->
+        <div class="hero-ing-tag it1"><span class="dot"></span>Ashwagandha</div>
+        <div class="hero-ing-tag it2"><span class="dot"></span>Shilajit</div>
+        <div class="hero-ing-tag it3"><span class="dot"></span>Giloy</div>
+        <div class="hero-ing-tag it4"><span class="dot"></span>Shatavari</div>
+        <div class="hero-ing-tag it5"><span class="dot"></span>Tulsi</div>
+
+        <!-- Rotating botanical stamp -->
+        <div class="hero-stamp">
+            <!-- Sirf text ghoomega -->
+            <svg class="stamp-text" width="90" height="90" viewBox="0 0 90 90">
+                <path id="stCircle" d="M 45,45 m -30,0 a 30,30 0 1,1 60,0 a 30,30 0 1,1 -60,0" fill="none" />
+                <text font-family="DM Sans,sans-serif" font-size="8.5" fill="var(--moss)" letter-spacing="2"
+                    font-weight="500">
+                    <textPath href="#stCircle">AYURVEDIC · NATURAL · EFFECTIVE · </textPath>
+                </text>
+            </svg>
+
+            <!-- Logo center mein fixed rahega -->
+            <img class="stamp-logo" src="https://fit-herb.vercel.app/fit-herb-desktop1.png" alt="logo" />
+        </div>
+
+        <!-- Mosaic grid -->
+        <div class="hero-mosaic">
+            <!-- Cell 1: left tall — leaf hands -->
+            <div class="hm-cell hm-c1" style="background:linear-gradient(145deg,#e8eed8,#d8e4c4);">
+                <div
+                    style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px;padding:20px;">
+                    <!-- Animated SVG botanical branch -->
+                    <svg class="herb-deco-branch" width="120" height="160" viewBox="0 0 120 160" fill="none">
+                        <path d="M60 155 C60 155 60 100 60 80 C60 60 60 20 60 10" stroke="#4a7a52" stroke-width="2"
+                            stroke-linecap="round" />
+                        <path d="M60 90 C50 80 35 75 20 78" stroke="#4a7a52" stroke-width="1.5"
+                            stroke-linecap="round" />
+                        <path d="M60 110 C72 98 85 95 98 100" stroke="#4a7a52" stroke-width="1.5"
+                            stroke-linecap="round" />
+                        <path d="M60 70 C48 58 32 55 18 60" stroke="#4a7a52" stroke-width="1.5"
+                            stroke-linecap="round" />
+                        <path d="M60 50 C70 38 84 36 96 42" stroke="#4a7a52" stroke-width="1.5"
+                            stroke-linecap="round" />
+                        <ellipse cx="14" cy="78" rx="10" ry="6" fill="#7aac7a" opacity="0.6"
+                            transform="rotate(-25,14,78)" />
+                        <ellipse cx="100" cy="100" rx="10" ry="6" fill="#7aac7a" opacity="0.6"
+                            transform="rotate(15,100,100)" />
+                        <ellipse cx="14" cy="60" rx="10" ry="6" fill="#4a7a52" opacity="0.5"
+                            transform="rotate(-30,14,60)" />
+                        <ellipse cx="98" cy="42" rx="10" ry="6" fill="#4a7a52" opacity="0.5"
+                            transform="rotate(20,98,42)" />
+                    </svg>
+                    <div
+                        style="font-family:'Cormorant Garamond',serif;font-size:14px;color:var(--moss);font-style:italic;text-align:center;">
+                        Rooted in Ayurveda</div>
+                </div>
+            </div>
+
+            <!-- Cell 2: centre tall — PRODUCT + rotating flower -->
+            <div class="hm-cell hm-c2">
+                <div class="hm-c2-inner">
+                    <!-- Rotating flower -->
+                    <svg class="herb-deco-flower"
+                        style="position:absolute;width:280px;height:280px;opacity:0.12;top:50%;left:29%;transform:translate(-50%,-50%);"
+                        viewBox="0 0 200 200">
+                        <g transform="translate(100,100)">
+                            <ellipse cx="0" cy="-55" rx="18" ry="32" fill="var(--sage)" transform="rotate(0)" />
+                            <ellipse cx="0" cy="-55" rx="18" ry="32" fill="var(--sage)" transform="rotate(45)" />
+                            <ellipse cx="0" cy="-55" rx="18" ry="32" fill="var(--sage)" transform="rotate(90)" />
+                            <ellipse cx="0" cy="-55" rx="18" ry="32" fill="var(--sage)" transform="rotate(135)" />
+                            <ellipse cx="0" cy="-55" rx="18" ry="32" fill="var(--sage)" transform="rotate(180)" />
+                            <ellipse cx="0" cy="-55" rx="18" ry="32" fill="var(--sage)" transform="rotate(225)" />
+                            <ellipse cx="0" cy="-55" rx="18" ry="32" fill="var(--sage)" transform="rotate(270)" />
+                            <ellipse cx="0" cy="-55" rx="18" ry="32" fill="var(--sage)" transform="rotate(315)" />
+                            <circle cx="0" cy="0" r="22" fill="var(--gold2)" opacity="0.8" />
+                        </g>
+                    </svg>
+                    <img class="hm-c2-product" src="women.png" alt="Men's Vitality Fizz">
+                </div>
+            </div>
+
+            <!-- Cell 3: ingredients collage -->
+            <div class="hm-cell hm-c3" style="background:linear-gradient(145deg,#f0e8d8,#e4d5c0);">
+                <div
+                    style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px;">
+                    <!-- Rotating small flower -->
+                    <!-- <svg class="herb-deco-flower" width="80" height="80" viewBox="0 0 80 80" style="opacity:0.5;">
+                        <g transform="translate(40,40)">
+                            <ellipse cx="0" cy="-20" rx="7" ry="13" fill="#c8960c" transform="rotate(0)" />
+                            <ellipse cx="0" cy="-20" rx="7" ry="13" fill="#c8960c" transform="rotate(60)" />
+                            <ellipse cx="0" cy="-20" rx="7" ry="13" fill="#c8960c" transform="rotate(120)" />
+                            <ellipse cx="0" cy="-20" rx="7" ry="13" fill="#c8960c" transform="rotate(180)" />
+                            <ellipse cx="0" cy="-20" rx="7" ry="13" fill="#c8960c" transform="rotate(240)" />
+                            <ellipse cx="0" cy="-20" rx="7" ry="13" fill="#c8960c" transform="rotate(300)" />
+                            <circle cx="0" cy="0" r="9" fill="var(--gold2)" />
+                        </g>
+                    </svg> -->
+                    <img src="tulsi.jpg" alt="Tulsi Drop"
+                        style="height:200px;object-fit:cover;filter:drop-shadow(0 4px 12px rgba(0,0,0,0.15));">
+                </div>
+            </div>
+
+            <!-- Cell 4: far right tall — women product -->
+            <div class="hm-cell hm-c4" style="background:linear-gradient(145deg,#ecdee8,#ddd0e4);">
+                <!-- <svg class="herb-deco-flower" width="80" height="80" viewBox="0 0 80 80" style="opacity:0.5;">
+                        <g transform="translate(40,40)">
+                            <ellipse cx="0" cy="-20" rx="7" ry="13" fill="#c8960c" transform="rotate(0)" />
+                            <ellipse cx="0" cy="-20" rx="7" ry="13" fill="#c8960c" transform="rotate(60)" />
+                            <ellipse cx="0" cy="-20" rx="7" ry="13" fill="#c8960c" transform="rotate(120)" />
+                            <ellipse cx="0" cy="-20" rx="7" ry="13" fill="#c8960c" transform="rotate(180)" />
+                            <ellipse cx="0" cy="-20" rx="7" ry="13" fill="#c8960c" transform="rotate(240)" />
+                            <ellipse cx="0" cy="-20" rx="7" ry="13" fill="#c8960c" transform="rotate(300)" />
+                            <circle cx="0" cy="0" r="9" fill="var(--gold2)" />
+                        </g>
+                    </svg> -->
+                <div
+                    style="width:100%;height:100%;display:flex;align-items:flex-end;justify-content:center;padding-bottom:20px;">
+                    <img src="tulsi-drop.png" alt="Women's Glow Fizz" class="cell-4-tulsi-drop" style="">
+                </div>
+            </div>
+
+            <!-- Cell 5: ingredient text card -->
+            <div class="hm-cell hm-c5"
+                style="background:var(--forest);display:flex;align-items:center;justify-content:center;padding:16px;">
+                <div style="text-align:center;">
+                    <div
+                        style="font-family:'Cormorant Garamond',serif;font-size:11px;color:var(--sage-lt);letter-spacing:2px;text-transform:uppercase;margin-bottom:6px;">
+                        Key Ingredients</div>
+                    <div
+                        style="font-family:'Cormorant Garamond',serif;font-size:17px;color:var(--ivory);font-style:italic;line-height:1.4;">
+                        Ashwagandha<br>Tulsi · Giloy<br>Shatavari</div>
+                </div>
+            </div>
+
+            <!-- Cell 6: wide bottom — combo products mosaic -->
+            <div class="hm-cell hm-c6" style="background:var(--cream3);">
+                <div class="hero-stats">
+                    <div class="hstat">
+                        <div class="val">50K+</div>
+                        <div class="lbl">Happy Customers</div>
+                    </div>
+                    <div class="hstat">
+                        <div class="val">100%</div>
+                        <div class="lbl">Natural Ingredients</div>
+                    </div>
+                    <div class="hstat">
+                        <div class="val">3+</div>
+                        <div class="lbl">Expert Formulas</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cell 7: Combined CTA & Tagline -->
+            <div class="hm-cell hm-c7 combined-cta-box">
+
+                <!-- Left Side: Title and Button -->
+                <div class="cta-main-content">
+                    <div class="cta-title-main">
+                        Start your <em>daily ritual</em>
+                    </div>
+                    <button class="shop-now-btn"
+                        onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">
+                        Shop Now →
+                    </button>
+                </div>
+
+                <!-- Right Side: Tagline Text -->
+                <div class="cta-description">
+                    Made with <strong>100% natural ingredients</strong>,
+                    our Ayurvedic formulas are free from artificial preservatives.
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==== TAGLINE STRIP ====  -->
     <div class="tagline-strip">
         <div class="tagline-scroll">
             <span>AYURVEDIC ROOTS</span>
@@ -142,244 +276,183 @@
         </div>
     </div>
 
-    <!-- PRODUCTS -->
-    <section style="padding:100px 0 0 0 ;">
+    <!-- ===== Products ===== -->
+    <div class="products-title-wrap">
+        <p class="prod-eyebrow">Our Formulas</p>
+        <h2 class="prod-heading">Crafted for <em>You</em></h2>
+        <p class="prod-sub">Three purposeful blends. One ancient science. Endless vitality.</p>
+    </div>
+    <div class="products-grid" style=" background: #f6f1e8;">
         <div class="container">
-            <div id="products">
-                <div class="products-header fade-up">
-                    <div>
-                        <div class="section-label">What We Offer</div>
-                        <h2 class="products-title">Products built<br>for your <em
-                                style="color:var(--teal);font-style:italic;">ritual.</em></h2>
+            <div class="single-product-grid">
+                <div class="product-card">
+                    <div class="card-top bg-green">
+                        <span class="badge bestseller">Bestseller</span>
+                        <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                        <img src="men.png" alt="Men's Vitality">
+                        <button class="add-to-cart">Add to Cart</button>
                     </div>
-                    <p style="color:var(--text-muted);font-size:16px;line-height:1.7;font-weight:300;">
-                        Each formula crafted with single-intent — to solve one thing, and solve it well.</p>
-                </div>
-            </div>
-        </div>
+                    <div class="card-bottom">
+                        <p class="category">MEN'S WELLNESS • VITALITY</p>
+                        <h3 class="product-name">Men's Vitality Fizz</h3>
+                        <p class="desc">Boost daily strength, focus & endurance with ancient Ayurvedic adaptogens.</p>
+                        <div class="price-row">
+                            <span class="current">₹599</span>
+                            <span class="old">₹799</span>
+                            <span class="discount">25% off</span>
+                        </div>
+                        <div class="tags">
+                            <span>Ashwagandha</span>
+                            <span>Watermelon flavour</span>
 
-        <div class="products-row">
-
-            <!-- Product 1: Men -->
-            <div class="product-card-hover">
-                <button class="wishlist-btn" title="Add to Wishlist">
-                    <i class="fa-regular fa-heart"></i>
-                </button>
-                <div class="bg-shape men    "></div>
-                <div class="img-wrapper">
-                    <img src="men.png" alt="Men's Vitality Fizz">
-                </div>
-                <div class="product-info">
-                    <h3>Men's Vitality Fizz</h3>
-                    <div class="price-box">
-                        <span class="old-price">₹799</span>
-                        <span class="new-price">₹599</span>
-                    </div>
-                    <a href="#" class="add-to-cart-btn">Add to Cart</a>
-                </div>
-            </div>
-
-            <!-- Product 2: Tulsi -->
-            <div class="product-card-hover">
-                <button class="wishlist-btn" title="Add to Wishlist">
-                    <i class="fa-regular fa-heart"></i>
-                </button>
-                <div class="bg-shape"></div>
-                <div class="img-wrapper">
-                    <img src="tulsi-drop.png" alt="Immuno Tulsi Drop">
-                </div>
-                <div class="product-info">
-                    <h3>Immuno Tulsi Drop</h3>
-                    <div class="price-box">
-                        <span class="old-price">₹299</span>
-                        <span class="new-price">₹199</span>
-                    </div>
-                    <a href="#" class="add-to-cart-btn">Add to Cart</a>
-                </div>
-            </div>
-
-            <!-- Product 3: Women -->
-            <div class="product-card-hover">
-                <button class="wishlist-btn" title="Add to Wishlist">
-                    <i class="fa-regular fa-heart"></i>
-                </button>
-                <div class="bg-shape women"></div>
-                <div class="img-wrapper">
-                    <img src="women.png" alt="Women's Glow-Up Fizz">
-                </div>
-                <div class="product-info">
-                    <h3>Women's Glow-Up Fizz</h3>
-                    <div class="price-box">
-                        <span class="old-price">₹799</span>
-                        <span class="new-price">₹599</span>
-                    </div>
-                    <a href="#" class="add-to-cart-btn">Add to Cart</a>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- ══ FLASH SALE ══ -->
-
-
-    <section class="section-pad flash-section hampers-merge" id="flash-hampers">
-        <div class="container px-4">
-            <!-- Section Header -->
-            <div class="text-center mb-5" data-aos="fade-up">
-                <div class="eyebrow-tag">
-                    <span class="eyebrow-line"></span>Gift The Ritual<span class="eyebrow-line"></span>
-                </div>
-                <h2 class="sec-title">Wellness <em>Hampers!</em></h2>
-            </div>
-
-            <div class="flash-promo" data-aos="fade-up">
-                <!-- Left Banner (Flash Promo Style) -->
-                <div class="flash-promo-left">
-                    <div class="flash-label">Get Up To</div>
-                    <div class="flash-percent">50<span>%</span></div>
-                    <div class="flash-title">Off Select Products</div>
-                    <button class="btn-buy-now"><i class="bi bi-bag me-1"></i> Buy Now</button>
-                </div>
-
-                <!-- Right Slider Area -->
-                <div class="flash-right">
-                    <!-- Countdown / Header -->
-                    <div class="flash-header">
-                        <h3>The Art of Giving</h3>
-                        <div class="countdown">
-                            <div class="cd-block">
-                                <span class="cd-num" id="cdH">08</span>
-                                <div class="cd-label">Hours</div>
-                            </div>
-                            <span class="cd-sep">:</span>
-                            <div class="cd-block">
-                                <span class="cd-num" id="cdM">24</span>
-                                <div class="cd-label">Mins</div>
-                            </div>
-                            <span class="cd-sep">:</span>
-                            <div class="cd-block">
-                                <span class="cd-num" id="cdS">00</span>
-                                <div class="cd-label">Secs</div>
-                            </div>
                         </div>
                     </div>
-
-                    <!-- Horizontal Scrollable Cards Area -->
-                    <div class="flash-products-scroll">
-
-                        <!-- Hamper Card 1 (Bestseller) -->
-                        <div class="flash-card">
-                            <div class="flash-card-img" style="background: #f0f4f2;">
-                                <span class="flash-badge-pill" style="background: var(--teal);"><i
-                                        class="bi bi-star-fill"></i> Most Popular</span>
-                                <img src="combo-men-women.png" alt="Daily Ritual Box">
-                            </div>
-                            <div class="flash-card-body">
-                                <div class="hcard-tags mb-1"><span class="hcard-tag">Bestseller</span></div>
-                                <div class="flash-card-name">The Daily Ritual Box</div>
-                                <div class="flash-card-price">
-                                    <span class="flash-now">₹1,499</span>
-                                    <span class="flash-was">₹1,899</span>
-                                </div>
-                                <button class="btn-add-flash">Shop Hamper →</button>
-                            </div>
+                </div>
+                <div class="product-card">
+                    <div class="card-top bg-green">
+                        <span class="badge bestseller">Bestseller</span>
+                        <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                        <img src="tulsi-drop.png" alt="Men's Vitality">
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="card-bottom">
+                        <p class="category">TULSI DROP • HERBAL</p>
+                        <h3 class="product-name">Herbal Tulsi Drops</h3>
+                        <p class="desc">Boost daily strength, focus & endurance with ancient Ayurvedic adaptogens.</p>
+                        <div class="price-row">
+                            <span class="current">₹599</span>
+                            <span class="old">₹799</span>
+                            <span class="discount">25% off</span>
                         </div>
-
-                        <!-- Hamper Card 2 (For Him) -->
-                        <div class="flash-card">
-                            <div class="flash-card-img" style="background: #e2f3fb;">
-                                <span class="flash-badge-pill" style="background: #2e4455;"><i
-                                        class="bi bi-shield-check"></i> For Him</span>
-                                <img src="combo-tulsi-men.png" alt="Men's Power Hamper">
-                            </div>
-                            <div class="flash-card-body">
-                                <div class="hcard-tags mb-1"><span class="hcard-tag">Strength</span></div>
-                                <div class="flash-card-name">Men's Power Hamper</div>
-                                <div class="flash-card-price">
-                                    <span class="flash-now">₹999</span>
-                                    <span class="flash-was">₹1,299</span>
-                                </div>
-                                <button class="btn-add-flash">View Box →</button>
-                            </div>
+                        <div class="tags">
+                            <span>Ashwagandha</span>
+                            <span>Tulsi Extract</span>
                         </div>
+                    </div>
+                </div>
 
-                        <!-- Hamper Card 3 (For Her) -->
-                        <div class="flash-card">
-                            <div class="flash-card-img" style="background: #f8ecee;">
-                                <span class="flash-badge-pill" style="background: #cd8973;"><i class="bi bi-magic"></i>
-                                    For Her</span>
-                                <img src="combo-women-tulsi.png" alt="Women's Glow Hamper">
-                            </div>
-                            <div class="flash-card-body">
-                                <div class="hcard-tags mb-1"><span class="hcard-tag">Skin Glow</span></div>
-                                <div class="flash-card-name">Women's Glow Hamper</div>
-                                <div class="flash-card-price">
-                                    <span class="flash-now">₹999</span>
-                                    <span class="flash-was">₹1,299</span>
-                                </div>
-                                <button class="btn-add-flash">View Box →</button>
-                            </div>
+                <div class="product-card">
+                    <div class="card-top bg-purple">
+                        <span class="badge new">New</span>
+                        <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                        <img src="women.png" alt="Women's Glow">
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="card-bottom">
+                        <p class="category">WOMEN'S WELLNESS • GLOW</p>
+                        <h3 class="product-name">Women's Glow-Up Fizz</h3>
+                        <p class="desc">Hormonal balance, radiant skin & sustained energy — the feminine formula.</p>
+                        <div class="price-row">
+                            <span class="current">₹599</span>
+                            <span class="old">₹799</span>
+                            <span class="discount">25% off</span>
                         </div>
-
-                        <!-- Hamper Card 4 (Corporate) -->
-                        <div class="flash-card">
-                            <div class="flash-card-img" style="background: #eee;">
-                                <span class="flash-badge-pill" style="background: #555;"><i class="bi bi-briefcase"></i>
-                                    Bulk Order</span>
-                                <img src="combo-men-women.png" alt="Corporate Kit">
-                            </div>
-                            <div class="flash-card-body">
-                                <div class="hcard-tags mb-1"><span class="hcard-tag">Corporate Wellness Kit</span></div>
-                                <div class="flash-card-name">Corporate Wellness Kit</div>
-                                <div class="flash-card-price">
-                                    <span class="flash-now">₹499/unit</span>
-                                </div>
-                                <button class="btn-add-flash">Enquire Now</button>
-                            </div>
+                        <div class="tags">
+                            <span>Shatavari</span>
+                            <span>Strawberry</span>
                         </div>
-
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
 
-    <!-- PROBLEM -->
-    <section class="problem-section">
+    <!-- ===== hampers ===== -->
+    <section style="  background-color: #f6f1e8;">
         <div class="container">
-            <div id="problem">
-                <div class="problem-left fade-up">
-                    <div class="section-label">The Problem</div>
-                    <h2>Life got faster.<br>Wellness got <em style="color:var(--sage);font-style:italic;">confused.</em>
-                    </h2>
-                    <p style="margin-top:20px;">People want something that actually works — without complicated
-                        routines,
-                        artificial fillers, or brands they can't trust. The wellness gap is real.</p>
+            <div class=" hamper-section">
+                <div class="promo-card">
+                    <div class="label">The Art of Gifting</div>
+                    <h2>Thoughtfully<br>Curated For<br>Your Loved Ones</h2>
+                    <p>From wellness essentials to immunity boosters, discover hampers that tell a story of care.</p>
+
+                    <div class="discount-badge">
+                        <span class="big-num">40%</span>
+                        <span style="display:block; font-size: 0.8rem; letter-spacing: 1px;">Storewide Discount</span>
+                    </div>
+
+                    <div class="sp-leaves">
+                        <svg class="herb-deco-branch" width="120" height="100" viewBox="0 0 120 100" fill="none">
+                            <path d="M60 95 C60 95 60 65 60 50 C60 35 60 10 60 5" stroke="rgba(122,172,122,0.5)"
+                                stroke-width="2" stroke-linecap="round" />
+                            <path d="M60 65 C48 55 34 52 20 56" stroke="rgba(122,172,122,0.5)" stroke-width="1.5"
+                                stroke-linecap="round" />
+                            <path d="M60 80 C72 68 86 66 100 71" stroke="rgba(122,172,122,0.5)" stroke-width="1.5"
+                                stroke-linecap="round" />
+                            <path d="M60 45 C47 33 31 31 18 37" stroke="rgba(122,172,122,0.4)" stroke-width="1.5"
+                                stroke-linecap="round" />
+                            <path d="M60 30 C70 18 84 17 97 23" stroke="rgba(122,172,122,0.4)" stroke-width="1.5"
+                                stroke-linecap="round" />
+                            <ellipse cx="16" cy="56" rx="10" ry="6" fill="rgba(122,172,122,0.35)"
+                                transform="rotate(-25,16,56)" />
+                            <ellipse cx="102" cy="71" rx="10" ry="6" fill="rgba(122,172,122,0.35)"
+                                transform="rotate(15,102,71)" />
+                            <ellipse cx="14" cy="37" rx="10" ry="6" fill="rgba(122,172,122,0.25)"
+                                transform="rotate(-30,14,37)" />
+                            <ellipse cx="99" cy="23" rx="10" ry="6" fill="rgba(122,172,122,0.25)"
+                                transform="rotate(20,99,23)" />
+                        </svg>
+                    </div>
                 </div>
-                <div class="problem-cards">
-                    <div class="problem-card" style="transition-delay:0.1s">
-                        <div class="problem-icon">
-                            <i class="fa-solid fa-bolt"></i>
-                        </div>
-                        <div>
-                            <h3>Life is Faster</h3>
-                            <p>No time for complex wellness rituals and lengthy supplement stacks.</p>
-                        </div>
+
+                <div class="products-container">
+                    <div class="header-bar">
+                        <h3>Curated Wellness Hampers</h3>
+                        <!-- <a href="#" style="color: var(--sage-green); font-weight: 600; text-decoration: none;">View All</a> -->
                     </div>
-                    <div class="problem-card" style="transition-delay:0.2s">
-                        <div class="problem-icon"><i class="fa-solid fa-brain"></i></div>
-                        <div>
-                            <h3>Stress is Higher</h3>
-                            <p>Urban lifestyles drain energy, immunity, and mental balance daily.</p>
+
+                    <div class="product-grid">
+                        <div class="product-item">
+                            <img src="tulsi-men.png" alt="Hamper 1">
+                            <div class="hamper-name">The Wellness Box</div>
+                            <div class="hamper-desc">Tulsi Drops • Ayurvedic • Wellness Guide</div>
+                            <div class="footer-price">
+                                <div class="price-box">
+                                    <span class="current">₹1,299</span>
+                                    <span class="old">₹1,599</span>
+                                </div>
+                                <button class="add-btn">Add</button>
+                            </div>
                         </div>
-                    </div>
-                    <div class="problem-card" style="transition-delay:0.3s">
-                        <div class="problem-icon"><i class="fa-solid fa-circle-question"></i></div>
-                        <div>
-                            <h3>Wellness is Confusing</h3>
-                            <p>Artificial ingredients, no transparency, complicated supplements — no trust.</p>
+
+                        <div class="product-item">
+                            <img src="tulsi-women.png" alt="Hamper 3">
+                            <div class="hamper-name">Immunity Ritual</div>
+                            <div class="hamper-desc">Giloy Fizz • Tulsi • Fitness </div>
+                            <div class="footer-price">
+                                <div class="price-box">
+                                    <span class="current">₹1,850</span>
+                                    <span class="old">₹2,200</span>
+                                </div>
+                                <button class="add-btn">Add</button>
+                            </div>
+                        </div>
+
+                        <div class="product-item">
+                            <img src="men-women.png" alt="Hamper 3">
+                            <div class="hamper-name">Glow Kit</div>
+                            <div class="hamper-desc"> Effervescent Wellness Tablets • Vitamin Boost</div>
+                            <div class="footer-price">
+                                <div class="price-box">
+                                    <span class="current">₹999</span>
+                                    <span class="old">₹1,499</span>
+                                </div>
+                                <button class="add-btn">Add</button>
+                            </div>
+                        </div>
+
+                        <div class="product-item">
+                            <img src="combo1.png" alt="Hamper 2">
+                            <div class="hamper-name">Detox Wellness Kit</div>
+                            <div class="hamper-desc"> Herbal Drops • Daily Detox Support • </div>
+                            <div class="footer-price">
+                                <div class="price-box">
+                                    <span class="current">₹1,100</span>
+                                    <span class="old">₹1,350</span>
+                                </div>
+                                <button class="add-btn">Add</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -387,202 +460,161 @@
         </div>
     </section>
 
-    <!-- SOLUTION -->
-    <section id="solution">
+    <!-- ====== testimonial =======  -->
+    <section class="testi-section rv" id="testi">
         <div class="container">
-            <div>
-                <div class="section-label" style="justify-content:center;">Our Answer</div>
-                <h2 class="solution-title fade-up">The <em>Fit.Herb</em><br>Way.</h2>
-                <p class="solution-sub fade-up">Rooted in Ayurveda. Designed for modern India. One simple ritual, every
-                    day.
+            <div class="sec-label">Real Stories</div>
+            <h2 class="sec-title">Loved by <em>50,000+</em> customers.</h2>
+            <div class="testi-grid">
+                <div class="t-card">
+                    <div class="t-stars">★★★★★</div>
+                    <p class="t-quote">"Been using Men's Vitality Fizz for 3 months. Energy and focus genuinely
+                        improved. Finally
+                        a brand that doesn't compromise on ingredients."</p>
+                    <div class="t-author">
+                        <div class="t-av">R</div>
+                        <div>
+                            <div class="t-name">Rahul Mehta</div>
+                            <div class="t-loc">Mumbai, Maharashtra</div><span class="t-tag">Men's Vitality
+                                Fizz</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="t-card">
+                    <div class="t-stars">★★★★★</div>
+                    <p class="t-quote">"Tulsi Drop is my morning ritual now. Immunity has been so much better this
+                        season — and I
+                        love that it's 100% natural. Highly recommend!"</p>
+                    <div class="t-author">
+                        <div class="t-av">P</div>
+                        <div>
+                            <div class="t-name">Priya Sharma</div>
+                            <div class="t-loc">Pune, Maharashtra</div><span class="t-tag">Immuno Tulsi Drop</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="t-card">
+                    <div class="t-stars">★★★★★</div>
+                    <p class="t-quote">"Women's Glow-Up Fizz is a game changer! Skin is glowing, feel more balanced.
+                        The
+                        gift
+                        hamper I ordered was beautifully packaged too!"</p>
+                    <div class="t-author">
+                        <div class="t-av">A</div>
+                        <div>
+                            <div class="t-name">Ananya Patel</div>
+                            <div class="t-loc">Bengaluru, Karnataka</div><span class="t-tag">Women's Glow-Up
+                                Fizz</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== CTA ====== -->
+    <section class="cta-section" id="contact">
+        <div class="cta-inner">
+            <div class="cta-content">
+                <div class="ey">Join the Movement</div>
+                <h2 class="cta-title">Start your <em>herbal ritual</em> today.</h2>
+                <p class="cta-desc">Simple. Aesthetic. Effective. The Fit.Herb way — rooted in Ayurveda, designed for
+                    modern India. Join 50,000+ happy customers.</p>
+
+                <div class="cta-shop-btns">
+                    <button class="btn-gold">Shop All Products →</button>
+                    <button class="btn-border">View Gift Hampers</button>
+                </div>
+            </div>
+
+            <div class="cta-form-area">
+                <p class="cta-note">Get wellness tips & exclusive offers in your inbox:</p>
+                <div class="nl-input">
+                    <input type="email" placeholder="Your email address">
+                    <button class="nl-sub ">Subscribe</button>
+                </div>
+                <p class="nl-fine">No spam, ever. Unsubscribe anytime 🌿</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== FOOTER ====== -->
+    <footer>
+        <div class="ft-top">
+            <div class="ft-brand">
+                <img src="https://fit-herb.vercel.app/white-logo.png" alt="Fit.Herb">
+                <p>Meticulously crafted Ayurvedic solutions for a balanced life. Sourced ethically, bottled spiritually.
                 </p>
-                <div class="philosophy-pills fade-up">
-                    <div class="pill">Simple</div>
-                    <div class="pill">Aesthetic</div>
-                    <div class="pill">Effective</div>
-                    <div class="pill">Ayurvedic</div>
-                    <div class="pill">Natural & Safe</div>
-                    <div class="pill">Daily Ritual</div>
+                <div class="ft-social">
+                    <a href="#" class="fs-btn" aria-label="Instagram"><svg viewBox="0 0 24 24">
+                            <rect x="2" y="2" width="20" height="20" rx="5" />
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                        </svg></a>
+                    <a href="#" class="fs-btn" aria-label="Facebook"><svg viewBox="0 0 24 24">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                        </svg></a>
+                    <a href="#" class="fs-btn" aria-label="YouTube"><svg viewBox="0 0 24 24">
+                            <path
+                                d="M22.54 6.42a2.78 2.78 0 0 0-1.94-1.96C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.4 19.54C5.12 20 12 20 12 20s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z" />
+                            <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" />
+                        </svg></a>
                 </div>
             </div>
-
-            <!-- decorative circles -->
-            <div
-                style="position:absolute;width:400px;height:400px;border-radius:50%;border:1px solid rgba(122,170,151,0.15);top:-100px;right:-100px;pointer-events:none;">
-            </div>
-            <div
-                style="position:absolute;width:600px;height:600px;border-radius:50%;border:1px solid rgba(122,170,151,0.08);bottom:-200px;left:-200px;pointer-events:none;">
-            </div>
-        </div>
-    </section>
-
-
-
-    <section class="combo-section">
-        <div class="container">
-
-            <div class="section-header">
-                <h2>Combo Packs for Better Results</h2>
-                <p>Powerful combinations crafted for complete wellness.</p>
-            </div>
-
-            <div class="combo-grid">
-
-                <!-- Combo 1 -->
-                <div class="combo-card">
-                    <img src="combo-tulsi-men.png" alt="Tulsi + Men Combo">
-
-                    <div class="combo-content">
-                        <h3>Tulsi + Men's Fitness</h3>
-                        <p>Boost immunity + daily strength for active lifestyle.</p>
-                        <button>Shop Combo</button>
-                    </div>
-                </div>
-
-                <!-- Combo 2 -->
-                <div class="combo-card">
-                    <img src="combo-men-women.png" alt="Men + Women Combo">
-
-                    <div class="combo-content">
-                        <h3>Men + Women Care</h3>
-                        <p>Complete wellness for both — strength, balance & vitality.</p>
-                        <button>Shop Combo</button>
-                    </div>
-                </div>
-
-                <!-- Combo 3 -->
-                <div class="combo-card">
-                    <img src="combo-women-tulsi.png" alt="Women + Tulsi Combo">
-
-                    <div class="combo-content">
-                        <h3>Women's Care + Tulsi</h3>
-                        <p>Glow, balance & immunity in one simple ritual.</p>
-                        <button>Shop Combo</button>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- WHY FITHERB -->
-    <section id="why">
-        <div class="section-label" style="justify-content:center;">Why Fit.Herb</div>
-        <h2 class="fade-up">Four reasons to <em style="color:var(--sage);font-style:italic;">trust us.</em></h2>
-        <p class="sub fade-up">No shortcuts. No artificial anything. Just ancient wisdom, modernised.</p>
-        <div class="why-grid">
-            <div class="why-card" style="transition-delay:0.1s">
-                <span class="why-icon">
-                    <i class="fa-solid fa-leaf"></i>
-                </span>
-                <h3>Ayurvedic Roots</h3>
-                <p>Every formula draws from centuries-old Ayurvedic traditions that have stood the test of time.</p>
-            </div>
-            <div class="why-card" style="transition-delay:0.2s">
-                <span class="why-icon">
-                    <i class="fa-solid fa-shield-heart"></i>
-                </span>
-                <h3>Natural & Safe</h3>
-                <p>Zero artificial ingredients. Clean labels. Exactly what you see is exactly what you get.</p>
-            </div>
-            <div class="why-card" style="transition-delay:0.3s">
-                <span class="why-icon">
-                    <i class="fa-solid fa-arrows-rotate"></i>
-                </span>
-                <h3>Easy to Use</h3>
-                <p>No complicated protocols. Just drop it in, take it daily, and feel the difference over time.</p>
-            </div>
-            <div class="why-card" style="transition-delay:0.4s">
-                <span class="why-icon">
-                    <i class="fa-solid fa-sun"></i>
-                </span>
-                <h3>Daily Ritual</h3>
-                <p>Built to become part of your everyday routine — as natural as your morning chai.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA -->
-    <section id="cta">
-        <h2 class="fade-up">Ready to start your<br><em>herbal ritual?</em></h2>
-        <p class="fade-up">Simple. Aesthetic. Effective. The Fit.Herb way.</p>
-        <div class="cta-buttons fade-up">
-            <a href="#products" class="btn-primary">Shop Now →</a>
-            <a href="#why" class="btn-secondary">Learn More</a>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <!-- SUBSCRIBE STRIP -->
-    <section class="footer-subscribe-strip">
-        <div class="footer-subscribe-box">
-            <h2>Begin Your Herbal Wellness Journey</h2>
-
-            <form class="footer-subscribe-form">
-                <input type="email" placeholder="email" required>
-                <button type="submit">SUBSCRIBE</button>
-            </form>
-        </div>
-    </section>
-
-    <!-- MAIN FOOTER -->
-    <footer class="main-footer">
-        <div class="footer-container">
-
-            <!-- BRAND -->
-            <div class="footer-col brand">
-                <img src="white-logo.png" alt="Fit Herb Logo" class="footer-logo">
-
-                <p>
-                    Meticulously crafted Ayurvedic solutions for a balanced life.
-                    Sourced ethically, bottled spiritually.
-                </p>
-            </div>
-
-            <!-- LINKS 1 -->
-            <div class="footer-col">
-                <h4>Useful Links</h4>
+            <div class="ft-col">
+                <h4>Shop</h4>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
+                    <li><a href="#">Men's Vitality Fizz</a></li>
+                    <li><a href="#">Immuno Tulsi Drop</a></li>
+                    <li><a href="#">Women's Glow Fizz</a></li>
+                    <li><a href="#">Combo Packs</a></li>
+                    <li><a href="#">Gift Hampers</a></li>
+                </ul>
+            </div>
+            <div class="ft-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
                     <li><a href="#">Blog</a></li>
+                    <li><a href="#">Press</a></li>
+                    <li><a href="#">Careers</a></li>
                     <li><a href="#">Contact</a></li>
                 </ul>
             </div>
-
-            <!-- LINKS 2 -->
-            <div class="footer-col">
-                <h4>Useful Links</h4>
+            <div class="ft-col">
+                <h4>Help</h4>
                 <ul>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms & Service</a></li>
+                    <li><a href="#">Track Order</a></li>
                     <li><a href="#">Return Policy</a></li>
+                    <li><a href="#">Shipping Info</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="tel:02241002121">022 41002121</a></li>
                 </ul>
             </div>
-
-            <!-- CONTACT -->
-            <div class="footer-col">
-                <h4>Contact Us</h4>
-                <p>Phone: 022 41002121</p>
-                <p>Email: store@fitherb.com</p>
-
-                <div class="social-icons">
-                    <i class="fa-brands fa-facebook-f"></i>
-                    <i class="fa-brands fa-instagram"></i>
-                    <i class="fa-brands fa-linkedin-in"></i>
-                    <i class="fa-brands fa-youtube"></i>
-                </div>
-            </div>
-
         </div>
-
-        <!-- BOTTOM -->
-        <div class="footer-bottom">
-            <p>© 2026 Fit.Herb. All Rights Reserved.</p>
+        <div class="ft-bot">
+            <p>© 2026 Fit.Herb. All rights reserved. Made with 🌿 in India.</p>
+            <div class="ft-bot-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Sitemap</a>
+            </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        const hdr = document.getElementById('siteHeader');
+        window.addEventListener('scroll', () => hdr.classList.toggle('scrolled', scrollY > 50));
+
+        // Mobile nav
+        const burger = document.getElementById('burgerBtn');
+        const mNav = document.getElementById('mobileNav');
+        const mnClose = document.getElementById('mnClose');
+        const mnBackdrop = document.getElementById('mnBackdrop');
+        burger.addEventListener('click', () => mNav.classList.add('open'));
+        mnClose.addEventListener('click', () => mNav.classList.remove('open'));
+        mnBackdrop.addEventListener('click', () => mNav.classList.remove('open'));
+    </script>
 </body>
 
 </html>
